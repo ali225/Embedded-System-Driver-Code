@@ -5,6 +5,7 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../DIO_AVR.c \
+../I2C_AVR.c \
 ../Keypad_AVR.c \
 ../LCD_4bit_AVR.c \
 ../LCD_AVR.c \
@@ -15,6 +16,7 @@ C_SRCS += \
 
 OBJS += \
 ./DIO_AVR.o \
+./I2C_AVR.o \
 ./Keypad_AVR.o \
 ./LCD_4bit_AVR.o \
 ./LCD_AVR.o \
@@ -25,6 +27,7 @@ OBJS += \
 
 C_DEPS += \
 ./DIO_AVR.d \
+./I2C_AVR.d \
 ./Keypad_AVR.d \
 ./LCD_4bit_AVR.d \
 ./LCD_AVR.d \

@@ -8,13 +8,20 @@
 #ifndef DIO_AVR_H_
 #define DIO_AVR_H_
 
-void DIO_VidSetPortDirection(u8 PortNumber, u8 Value);
-void DIO_VidSetPortValue(u8 PortNumber, u8 Value);
+typedef enum{
+		BASE_A = 0,
+		BASE_B,
+		BASE_C,
+		BASE_D
+}genum_port_t;
 
-void DIO_VidSetPinDirection(u8 PortNumber, u8 Pin, u8 Value);
-void DIO_VidSetPinValue(u8 PortNumber, u8 Pin, u8 Value);
+void DIO_VidSetPortDirection(genum_port_t PortNumber, u8 Value);
+void DIO_VidSetPortValue(genum_port_t PortNumber, u8 Value);
 
-u8 DIO_u8GetPortValue(u8 Port);
-u8 DIO_u8GetPinValue(u8 Port, u8 Pin);
+void DIO_VidSetPinDirection(genum_port_t PortNumber, u8 Pin, u8 Value);
+void DIO_VidSetPinValue(genum_port_t PortNumber, u8 Pin, u8 Value);
+
+u8 DIO_u8GetPortValue(genum_port_t Port);
+u8 DIO_u8GetPinValue(genum_port_t Port, u8 Pin);
 
 #endif /* DIO_AVR_H_ */
