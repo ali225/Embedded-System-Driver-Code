@@ -11,7 +11,6 @@
 #include <util/delay.h>
 #define F_CPU 8000000UL
 
-
 void I2C_Inint(u64 SCL_Clock) {
 	TWBR = (u8) (((F_CPU / SCL_Clock) - 16) / (2 * prescaler));
 	if (prescaler == 0)
@@ -22,6 +21,7 @@ void I2C_Inint(u64 SCL_Clock) {
 		TWSR = 2;
 	else if (prescaler == 64)
 		TWSR = 3;
+	
 }
 
 void I2C_Start(void) {
