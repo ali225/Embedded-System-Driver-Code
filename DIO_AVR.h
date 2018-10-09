@@ -9,7 +9,7 @@
 #define DIO_AVR_H_
 
 typedef enum{
-		BASE_A = 0,
+		BASE_A,
 		BASE_B,
 		BASE_C,
 		BASE_D
